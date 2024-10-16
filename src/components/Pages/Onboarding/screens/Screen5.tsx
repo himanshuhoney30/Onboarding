@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 interface Slide {
     title: string;
     description: string;
@@ -42,6 +41,22 @@ const Carousel: React.FC = () => {
         }
     };
 
+    // Helper function to render the SVG dots based on the current slide
+    const renderDots = () => {
+        return slides.map((_, index) => (
+            <svg
+                key={index}
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle cx="6" cy="6" r="6" fill={index === currentSlide ? "#42DBF4" : "#E5E5E5"} />
+            </svg>
+        ));
+    };
+
     return (
         <>
             {/* Back Button */}
@@ -51,28 +66,17 @@ const Carousel: React.FC = () => {
             >
                 {/* SVG Arrow Icon */}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#0B102D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12 19L5 12L12 5" stroke="#0B102D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M19 12H5" stroke="#0B102D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12 19L5 12L12 5" stroke="#0B102D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
 
                 Back
             </button>
 
-
             <div className="relative w-[514px] h-[268px] text-start">
+                {/* SVG Dots Indicator */}
                 <div className="flex gap-2">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#42DBF4" />
-                    </svg>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#42DBF4" />
-                    </svg>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#42DBF4" />
-                    </svg>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#42DBF4" />
-                    </svg>
+                    {renderDots()} {/* Dynamic dots */}
                 </div>
 
                 {/* Slide Content */}
