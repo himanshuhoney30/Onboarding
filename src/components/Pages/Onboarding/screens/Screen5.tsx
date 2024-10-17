@@ -75,7 +75,7 @@ const Carousel: React.FC = () => {
 
             <div className="relative w-[514px] h-[268px] text-start">
                 {/* SVG Dots Indicator */}
-                <div className="flex gap-2">
+                <div className="flex gap-2 mb-3 w-[12%]">
                     {renderDots()} {/* Dynamic dots */}
                 </div>
 

@@ -21,12 +21,12 @@ const Screen4: React.FC<NameScreenProps> = ({ onNext, onBack, userData }) => {
 
     return (
         <div className="h-[320px] w-[514px]">
-            <h2 className="text-3xl font-semibold text-start">You are all set!</h2>
-            <h2 className="text-3xl font-semibold text-start">This is where all your files come</h2>
-            <h2 className="text-3xl font-semibold text-start">to life with AI</h2>
+            <h2 className="text-3xl font-bold text-start">You are all set!</h2>
+            <h2 className="text-3xl font-bold text-start">This is where all your files come</h2>
+            <h2 className="text-3xl font-bold text-start">to life with AI</h2>
 
-            <div className="h-1 bg-[#30A530] mt-2"></div>
-            <div className="h-1 bg-[#30A530] mt-3"></div>
+            <div className="h-1 bg-[#30A530] mt-6"></div>
+            <div className="h-1 bg-[#30A530] mt-2 mb-7"></div>
             <p className="text-sm text-gray-500 text-left mt-4 mb-4">
                 Lorem ipsum dolor sit amet consectetur. Id nec massa ut rhoncus arcu in bibendum elementum porttitor. Quis dictumst nam tempor viverra vitae non. Auctor dapibus et sollicitudin habitasse in consectetur cras.
             </p>

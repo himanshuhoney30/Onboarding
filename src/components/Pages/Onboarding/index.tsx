@@ -22,7 +22,7 @@ const Onboarding = () => {
         dashboard: "",
         screen4: "",
         screen5: "",
-       
+
     });
 
     useEffect(() => {
@@ -74,31 +74,32 @@ const Onboarding = () => {
     const { content, image } = renderStep();
 
     return (
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex flex-col md:flex-row items-center justify-center h-screen">
             {/* Left Onboarding Card */}
-
             <div className={classNames(
                 "bg-[linear-gradient(0deg,rgba(255,255,255,0.6),rgba(255,255,255,0.6)),linear-gradient(0deg,#F5F5F5,#F5F5F5)] flex flex-col justify-between",
-                currentStep === 6 ? "w-full max-w-5xl h-full" : "w-full max-w-3xl h-full")}>
+                "w-full md:w-1/2 h-full"
+            )}>
                 {/* Progress Bar */}
                 {/* <OnboardingProgressBar currentStep={currentStep} totalSteps={totalSteps} /> */}
-                <div className="px-12 py-8 flex-grow overflow-y-auto flex flex-col items-center justify-center h-full text-center">
+                <div className="px-6 md:px-12 py-8 flex-grow overflow-y-auto flex flex-col items-center justify-center h-full text-center">
                     {content}
                 </div>
             </div>
 
             {/* Right Onboarding Card */}
-            <div
-                className={classNames(
-                    "bg-[#10152a] flex flex-col justify-between",
-                    currentStep === 6 ? "w-full max-w-5xl h-full" : "w-full max-w-3xl h-full",
-                    "hidden md:block")}>
+            <div className={classNames(
+                "bg-[#10152a] flex flex-col justify-between",
+                "w-full md:w-1/2 h-full hidden md:flex"
+            )}>
                 <div className="flex items-center justify-center h-full">
                     {/* Display the image based on the current step */}
-                    <img src={image} alt="Onboarding step" className="mt- w-450px h-96" />
+                    <img src={image} alt="Onboarding step" className="w-full max-w-md h-96 object-contain" />
                 </div>
             </div>
         </div>
+
+
     );
 };
 

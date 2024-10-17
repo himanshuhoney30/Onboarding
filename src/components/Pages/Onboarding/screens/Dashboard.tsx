@@ -18,7 +18,7 @@ const WelcomeScreen: React.FC<DashboardScreenProps> = ({ onNext }) => {
             <div className="h-1 bg-[#30A530] mt-2"></div>
             <div className="h-1 bg-[#30A530] mt-3"></div>
 
-            <p className="text-gray-600 mb-6 text-start">But first, we would like to know...</p>
+            <p className="text-gray-600 mb-6 text-start mt-6">But first, we would like to know...</p>
 
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
