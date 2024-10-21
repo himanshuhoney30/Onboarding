@@ -1,18 +1,11 @@
 import React from "react";
 
-// Define a more specific type for userData
-interface UserData {
-    name?: string;
-}
-
 interface NameScreenProps {
     onNext: () => void;
     onBack: () => void;
-    setUserData: (data: Partial<UserData>) => void;
-    userData: UserData;
 }
 
-const Screen4: React.FC<NameScreenProps> = ({ onNext, onBack, userData }) => {
+const Screen4: React.FC<NameScreenProps> = ({ onNext, onBack }) => {
 
     const handleNext = (event: React.FormEvent) => {
         event.preventDefault();

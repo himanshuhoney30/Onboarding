@@ -1,9 +1,19 @@
 import React, { useState } from "react";
+import image1 from "../../../../assets/Image2.png"
+import image2 from "../../../../assets/Image3.png"
+import image3 from "../../../../assets/Image4.png"
+import image4 from "../../../../assets/Image5.png"
 
 interface Slide {
     title: string;
     description: string;
 }
+
+interface Props {
+    onNext: () => void;
+    onBack: () => void;
+}
+
 
 const slides: Slide[] = [
     {
@@ -24,7 +34,7 @@ const slides: Slide[] = [
     },
 ];
 
-const Carousel: React.FC = () => {
+const Screen5 = (props: Props) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handleNext = () => {
@@ -111,4 +121,4 @@ const Carousel: React.FC = () => {
     );
 };
 
-export default Carousel;
+export default Screen5;
