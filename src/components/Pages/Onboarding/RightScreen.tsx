@@ -1,6 +1,10 @@
 import classNames from "classnames";
 import dashBoardImageSrc from "../../../assets/Image1.png"
-import dashBoardImage from "../../../assets/Image1.png"
+import dashBoardImage2 from "../../../assets/Image2.png"
+import dashBoardImage3 from "../../../assets/Image3.png"
+import dashBoardImage4 from "../../../assets/Image4.png"
+import dashBoardImage5 from "../../../assets/Image5.png"
+
 
 interface Props {
   step: number;
@@ -8,10 +12,12 @@ interface Props {
 
 const renderStepContent = (currentStep: number) => {
   switch (currentStep) {
-    case 1: return dashBoardImage;
-    case 2:
-    case 3:
-    default: return;
+    case 1: return dashBoardImageSrc;
+    case 2: return dashBoardImage2;
+    case 3: return dashBoardImage3;
+    case 4: return dashBoardImage4;
+    case 5: return dashBoardImage5
+    default: return dashBoardImageSrc;
   }
 };
 

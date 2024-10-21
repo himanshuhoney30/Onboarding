@@ -37,7 +37,7 @@ const CustomSelect = (props: Props) => {
       </div>
 
       {isOpen && (
-        <ul className="absolute mt-1 w-full border border-[#42DBF4] rounded-lg bg-white z-10">
+        <ul className="absolute mt-1 w-full border border-[#42DBF4] rounded-lg bg-white z-10" >
           {props.options.map((option) => (
             <li
               key={option.value}
